@@ -10,9 +10,13 @@ import java.time.Duration;
 
 public class App 
 {
-    public static void main( String[] args ) throws InterruptedException
+    public static void main( String[] args ) //throws InterruptedException
     {
-        WebDriverManager.chromedriver().setup();
+
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        System.out.println(fizzBuzz.getString(3));
+
+        /*WebDriverManager.chromedriver().setup();
 
         WebDriver driver;
         driver = new ChromeDriver();
@@ -36,6 +40,6 @@ public class App
         searchBox = driver.findElement(By.name("q"));
         searchBox.getAttribute("value"); // =>"Selenium
 
-        driver.quit();
+        driver.quit();*/
     }
 }

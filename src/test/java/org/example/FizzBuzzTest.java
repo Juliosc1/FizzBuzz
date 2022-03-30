@@ -2,8 +2,6 @@ package org.example;
 
 import org.junit.jupiter.api.*;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class FizzBuzzTest {
     FizzBuzz fizzBuzz;
 
@@ -14,14 +12,14 @@ class FizzBuzzTest {
 
     @Test
     @DisplayName("Testing the FizzBuzz game")
-    void threeShouldReturnFizz() {
+    void getString3ReturnFizz() {
         String expected = "Fizz";
         String actual = fizzBuzz.getString(3);
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
-    void fiveShouldReturnBuzz() {
+    void getString5ReturnBuzz() {
         String expected = "Buzz";
         String actual = fizzBuzz.getString(5);
         Assertions.assertEquals(expected, actual);
@@ -29,40 +27,47 @@ class FizzBuzzTest {
 
     @Test
     @RepeatedTest(3)
-    void threeAndFiveShouldReturnFizzBuzz() {
+    void getString15ReturnFizzBuzz() {
         String expected = "FizzBuzz";
         String actual = fizzBuzz.getString(15);
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
-    void addThreeXFourTimes() {
+    void getString2Return2() {
+        String expected = "2";
+        String actual = fizzBuzz.getString(2);
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    void getString3333ReturnFizz() {
         String expected = "Fizz";
         String actual = fizzBuzz.getString(3333);
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
-    void NoExceptionShouldBeThrown() {
+    void getString3ReturnNotBuzz() {
+        String unexpected = "Buzz";
+        String actual = fizzBuzz.getString(3);
+        Assertions.assertNotEquals(unexpected, actual);
+    }
+
+    @Test
+    void getStringNoExceptionShouldBeThrown() {
         fizzBuzz.getString(3);
         Assertions.assertTrue(true);
     }
 
     @Test
-    void fiveShouldNotReturnFizz() {
+    void getString5ShouldNotReturnFizz() {
         boolean actual;
         if (!fizzBuzz.getString(5).equals("Fizz")) {
             actual = false;
         } else actual = true;
 
         Assertions.assertFalse(actual);
-    }
-
-    @Test
-    void threeShouldNotGiveBuzz() {
-        String unexpected = "Buzz";
-        String actual = fizzBuzz.getString(3);
-        Assertions.assertNotEquals(unexpected, actual);
     }
 
 }
