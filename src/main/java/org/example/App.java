@@ -15,6 +15,7 @@ public class App
 
         FizzBuzz fizzBuzz = new FizzBuzz();
         System.out.println(fizzBuzz.getString(3));
+        System.out.println("Hello World");
 
         /*WebDriverManager.chromedriver().setup();
 
