@@ -1,14 +1,15 @@
-name: tests
-on:
-  pull_request:
+name: run TDD java JUnit 5 test
+on: 
+  push:
     branches: [ master ]
+    
 jobs:
-  build_and_test:
+  run_tests:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v2
-      - name: Set up JDK 17
+      - name: Set up JDK 
         uses: actions/setup-java@v1
         with:
           java-version: 17
@@ -18,5 +19,5 @@ jobs:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
-      - name: Run tests with Maven
+      - name: Run my tests using Maven
         run: mvn -B test --file pom.xml
