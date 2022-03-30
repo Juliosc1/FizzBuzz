@@ -25,7 +25,6 @@ class FizzBuzzTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    @Test
     @RepeatedTest(3)
     void getString15ReturnFizzBuzz() {
         String expected = "FizzBuzz";
@@ -69,5 +68,4 @@ class FizzBuzzTest {
 
         Assertions.assertFalse(actual);
     }
-
 }
