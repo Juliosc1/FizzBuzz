@@ -55,7 +55,7 @@ class FizzBuzzTest {
 
     @Test
     void getStringNoExceptionShouldBeThrown() {
-        fizzBuzz.getString(3);
+        fizzBuzz.getString(2);
         Assertions.assertTrue(true);
     }
 
