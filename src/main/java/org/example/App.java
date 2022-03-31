@@ -33,7 +33,7 @@ public class App
         WebElement searchButton = driver.findElement(By.name("btnK"));
 
         //Skriv något i textrutan
-        searchBox.sendKeys("tv");
+        searchBox.sendKeys("Programmering Java");
         System.out.println(searchBox.getAttribute("value"));
         searchButton.click();
 

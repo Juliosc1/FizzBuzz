@@ -55,17 +55,12 @@ class FizzBuzzTest {
 
     @Test
     void getStringNoExceptionShouldBeThrown() {
-        fizzBuzz.getString(2);
+        fizzBuzz.getString(3);
         Assertions.assertTrue(true);
     }
 
     @Test
     void getString5ShouldNotReturnFizz() {
-        boolean actual;
-        if (!fizzBuzz.getString(5).equals("Fizz")) {
-            actual = false;
-        } else actual = true;
-
-        Assertions.assertFalse(actual);
+             Assertions.assertFalse(fizzBuzz.getString(5).equals("Fizz"));
     }
 }
