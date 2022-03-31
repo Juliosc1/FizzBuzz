@@ -54,9 +54,8 @@ class FizzBuzzTest {
     }
 
     @Test
-    void getStringNoExceptionShouldBeThrown() {
-        fizzBuzz.getString(3);
-        Assertions.assertTrue(true);
+    void getString3ShouldReturnFizz() {
+        Assertions.assertTrue(fizzBuzz.getString(3).equals("Fizz"));
     }
 
     @Test
