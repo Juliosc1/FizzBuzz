@@ -10,13 +10,13 @@ import java.time.Duration;
 
 public class App 
 {
-    public static void main( String[] args ) //throws InterruptedException
+    public static void main( String[] args ) throws InterruptedException
     {
 
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        System.out.println(fizzBuzz.getString(3));
+        //FizzBuzz fizzBuzz = new FizzBuzz();
+        //System.out.println(fizzBuzz.getString(3));
 
-        /*WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().setup();
 
         WebDriver driver;
         driver = new ChromeDriver();
@@ -33,13 +33,13 @@ public class App
         WebElement searchButton = driver.findElement(By.name("btnK"));
 
         //Skriv något i textrutan
-        searchBox.sendKeys("Selenium");
+        searchBox.sendKeys("tv");
         System.out.println(searchBox.getAttribute("value"));
         searchButton.click();
 
         searchBox = driver.findElement(By.name("q"));
         searchBox.getAttribute("value"); // =>"Selenium
 
-        driver.quit();*/
+        driver.quit();
     }
 }
