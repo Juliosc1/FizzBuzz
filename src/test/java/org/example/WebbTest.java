@@ -11,7 +11,7 @@ import java.time.Duration;
 
 import static org.junit.Assert.fail;
 
-public class UntitledTestCase {
+public class WebbTest {
     private WebDriver driver;
     private StringBuffer verificationErrors = new StringBuffer();
 
