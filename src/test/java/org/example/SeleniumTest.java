@@ -32,6 +32,7 @@ import static org.junit.Assert.fail;
             driver.findElement(By.xpath("//input[@type='text']")).sendKeys("rtx 3090");
             driver.findElement(By.xpath("//input[@type='text']")).sendKeys(Keys.ENTER);
             driver.findElement(By.linkText("Apple M1 Ultra utpresterar inte Nvidia Geforce RTX 3090")).click();
+            System.out.println("Page title is: " + driver.getTitle());
         }
 
         @After

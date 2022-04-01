@@ -31,6 +31,7 @@ public class WebbTest {
         driver.findElement(By.xpath("//input[@type='text']")).sendKeys("broforce");
         driver.findElement(By.xpath("//input[@type='text']")).sendKeys(Keys.ENTER);
         driver.findElement(By.linkText("Broforce")).click();
+        System.out.println("Page title is: " + driver.getTitle());
     }
 
     @After
